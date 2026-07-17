@@ -1,4 +1,3 @@
-import streamlit as plt
 import streamlit as st
 import pickle
 import numpy as np
@@ -22,7 +21,7 @@ MODEL_PATH = "model(2).pkl"
 @st.cache_resource
 def load_model():
     if not os.path.exists(MODEL_PATH):
-        st.error(f"❌ Error: `{MODEL_PATH}` not found in the current directory! Please upload it.")
+        st.error(f"❌ Error: `{MODEL_PATH}` not found in the current directory! Please upload your model file.")
         return None
     try:
         with open(MODEL_PATH, 'rb') as f:
